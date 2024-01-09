@@ -3,24 +3,34 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        public string Modelo { get; set; }
+        public string IMEI { get; set; }
+        public int Memoria { get; set; }
 
-        public Smartphone(string numero)
-        {
-            Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
-        }
+        public abstract void Ligar();
+        public abstract void ReceberLigacao();
+        public abstract void InstalarAplicativo(string nome);
 
-        public void Ligar()
-        {
-            Console.WriteLine("Ligando...");
-        }
+        // Construtor da classe abstrata
+        //public Smartphone(string numero, string modelo, string imei, int memoria)
+        //{
+            //Numero = numero;
+            //Modelo = modelo;
+            //Imei = imei;
+            //Memoria = memoria;
+        //}
 
-        public void ReceberLigacao()
-        {
-            Console.WriteLine("Recebendo ligação...");
-        }
+        //public void Ligar()
+        //{
+            //Console.WriteLine("Ligando...");
+        //}
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        //public void ReceberLigacao()
+        //{
+            //Console.WriteLine("Recebendo ligação...");
+        //}
+
+        // Método abstrato que deve ser implementado nas classes filhas
+        //public abstract void InstalarAplicativo(string nomeApp);
     }
 }
